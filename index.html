@@ -15,7 +15,7 @@
   }
 
   /* ── BANNER TOP ── */
-  .banner-top{
+  .banner-top, .banner-bottom{
     width:100%;display:flex;justify-content:center;align-items:center;
     padding:6px 0;background:rgba(0,0,0,0.6);flex-shrink:0;
   }
@@ -135,31 +135,22 @@
   .footer-links a{color:rgba(255,255,255,0.4);text-decoration:none;}
   .footer-links a:hover{color:#fff;}
   .footer-copy{font-size:11px;color:rgba(255,255,255,0.3);}
-
-  /* ── TIMER BAR ── */
-  .timer-bar{
-    width:100%;max-width:440px;
-    background:rgba(232,34,42,0.12);
-    border-bottom:1px solid rgba(232,34,42,0.25);
-    padding:7px 16px;font-size:13px;color:#ffd700;
-    text-align:center;font-weight:600;
-  }
 </style>
 </head>
 <body>
 
-<!-- BANNER TOP -->
+<!-- BANNER TOP 468x60 -->
 <div class="banner-top">
   <script>
     atOptions = {
-      'key' : '8411d75039e3f41748d42ba9a75af79e',
+      'key' : '94981762206351e5a16e78f386677112',
       'format' : 'iframe',
-      'height' : 90,
-      'width' : 728,
+      'height' : 60,
+      'width' : 468,
       'params' : {}
     };
   </script>
-  <script src="https://www.highperformanceformat.com/8411d75039e3f41748d42ba9a75af79e/invoke.js"></script>
+  <script src="https://www.highperformanceformat.com/94981762206351e5a16e78f386677112/invoke.js"></script>
 </div>
 
 <!-- TICKER -->
@@ -181,11 +172,6 @@
     <span class="ticker-dot"></span>
     <span id="t_only2">ONLY TODAY</span>
   </div>
-</div>
-
-<!-- TIMER BAR -->
-<div class="timer-bar" id="timerBar">
-  ⏱ <span id="timerLabel">Finding matches in</span> <span id="timerCount">30</span>s...
 </div>
 
 <!-- HERO -->
@@ -228,13 +214,29 @@
   <div class="footer-copy" id="footerCopy">© Copyright 2026, Angeliks Ltd</div>
 </div>
 
+<!-- BANNER BOTTOM 320x50 -->
+<div class="banner-bottom" style="max-width:440px;margin:0 auto;">
+  <script>
+    atOptions = {
+      'key' : '6ae580488f1fdeab7330f314c59b60c4',
+      'format' : 'iframe',
+      'height' : 50,
+      'width' : 320,
+      'params' : {}
+    };
+  </script>
+  <script src="https://www.highperformanceformat.com/6ae580488f1fdeab7330f314c59b60c4/invoke.js"></script>
+</div>
+
+<!-- POPUNDER -->
+<script src="https://pl30178632.effectivecpmnetwork.com/44/1c/a5/441ca5d7dd23f671c67abb13b123d8f0.js"></script>
+
 <script>
   var SMARTLINK = 'https://www.effectivecpmnetwork.com/a8rqsjcf?key=00f0a81d25d1e604c7bd0ccddd84dad1';
 
   // ── Multi-bahasa ──────────────────────────────────────────────
   var LANG = {
     SE: {
-      timerLabel:  'Hittar matchningar om',
       ticker_free: '100% GRATIS ÅTKOMST',
       ticker_only: 'BARA IDAG',
       heroTitle:   'Tusentals medlemmar söker efter casual sex på din plats',
@@ -255,7 +257,6 @@
       dsa:      'Digital Service Act',
     },
     DE: {
-      timerLabel:  'Matches werden gesucht in',
       ticker_free: '100% KOSTENLOSER ZUGANG',
       ticker_only: 'NUR HEUTE',
       heroTitle:   'Tausende Mitglieder suchen nach Casual Sex in deiner Nähe',
@@ -276,7 +277,6 @@
       dsa:      'Digital Service Act',
     },
     CA: {
-      timerLabel:  'Recherche de matchs dans',
       ticker_free: 'ACCÈS 100% GRATUIT',
       ticker_only: 'AUJOURD\'HUI SEULEMENT',
       heroTitle:   'Des milliers de membres cherchent des rencontres dans votre région',
@@ -297,7 +297,6 @@
       dsa:      'Digital Service Act',
     },
     JP: {
-      timerLabel:  'マッチングを検索中',
       ticker_free: '100% 無料アクセス',
       ticker_only: '本日限り',
       heroTitle:   'あなたの地域でカジュアルな出会いを探している何千ものメンバーがいます',
@@ -318,7 +317,6 @@
       dsa:      'デジタルサービス法',
     },
     EN: {
-      timerLabel:  'Finding matches in',
       ticker_free: '100% FREE ACCESS',
       ticker_only: 'ONLY TODAY',
       heroTitle:   'Thousands of members are looking for casual sex in your location',
@@ -345,7 +343,6 @@
   var t = LANG[cc] || LANG['EN'];
 
   // Terapkan teks
-  document.getElementById('timerLabel').textContent  = t.timerLabel;
   document.getElementById('heroTitle').textContent   = t.heroTitle;
   document.getElementById('nextBtn').textContent     = t.nextBtn;
   document.getElementById('hintText').textContent    = t.hint;
@@ -385,29 +382,8 @@
   // ── NEXT button click ─────────────────────────────────────────
   document.getElementById('nextBtn').addEventListener('click', function(e){
     e.preventDefault();
-    clearInterval(autoTimer);
-    redirected = true;
     window.location.href = SMARTLINK;
   });
-
-  // ── TIMER 30 DETIK AUTO REDIRECT ─────────────────────────────
-  var timerSecs  = 30;
-  var timerEl    = document.getElementById('timerCount');
-  var timerBar   = document.getElementById('timerBar');
-  var redirected = false;
-
-  var autoTimer = setInterval(function(){
-    timerSecs--;
-    timerEl.textContent = timerSecs;
-    if(timerSecs <= 0){
-      clearInterval(autoTimer);
-      if(!redirected){
-        redirected = true;
-        timerBar.innerHTML = '✅ Redirecting...';
-        window.location.href = SMARTLINK;
-      }
-    }
-  }, 1000);
 </script>
 </body>
 </html>
